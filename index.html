@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nRF52840 Web BLE Connector</title>
+    <meta name="description" content="A powerful and modern web interface to connect with Nordic nRF52840 devices using the Web Bluetooth API.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <main class="app-container">
+        <header>
+            <h1>nRF52840 Connector</h1>
+            <p>Ready to bridge the physical and digital world</p>
+        </header>
+
+        <section class="controls">
+            <button id="connectBtn" class="btn primary-btn">
+                <span class="icon">🔗</span> Connect Device
+            </button>
+            <button id="disconnectBtn" class="btn secondary-btn" disabled>
+                <span class="icon">🛑</span> Disconnect
+            </button>
+        </section>
+
+        <section class="device-info">
+            <div class="status-card">
+                <h3>Status</h3>
+                <p id="connectionStatus" class="status-disconnected">Disconnected</p>
+            </div>
+            <div class="status-card">
+                <h3>Device Name</h3>
+                <p id="deviceName">-</p>
+            </div>
+        </section>
+
+        <section class="terminal">
+            <div class="terminal-header">
+                <h3>Terminal Output</h3>
+                <button id="clearBtn" class="btn small-btn">Clear</button>
+            </div>
+            <div id="terminalOutput" class="terminal-window">
+                <p class="sys-msg">System ready. Click 'Connect Device' to begin.</p>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
